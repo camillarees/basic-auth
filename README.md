@@ -13,3 +13,7 @@ uses authentication header to compare encoded data stored in the database
 
   - /signup
 creates new user data from JSON object or form data with the two keys username and password
+
+## Credit and Collaboration
+
+[401d49 Demo and Code Review](https://github.com/codefellows/seattle-code-javascript-401d49/tree/main/class-06)

@@ -2,7 +2,7 @@
 
 // Create a Sequelize model
 
-module.exports = (sequelize, DataTypes) => sequelize.define('User', {
+const UsersModel = (sequelize, DataTypes) => sequelize.define('UsersModel', {
   username: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -12,3 +12,5 @@ module.exports = (sequelize, DataTypes) => sequelize.define('User', {
     allowNull: false,
   },
 });
+
+module.exports = UsersModel;

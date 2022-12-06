@@ -2,11 +2,12 @@
 
 // 3rd Party Resources
 const express = require('express');
+const authRouter = require('./');
 
 // Prepare the express app
 const app = express();
 
-const routes = require('./routes/users');
+const routes = require('./auth/routes/users');
 
 // Process JSON input and put the data on req.body
 app.use(express.json());
@@ -16,9 +17,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/', routes);
 
+app.use(authRouter);
+
 module.exports = {
   app,
-  start: (PORT) => {
-    app.listen(PORT, () => console.log(`Server running on ${PORT}`));
-  },
+  start: () => app.listen(3000, () => console.log(`server up`)),
 };
+
