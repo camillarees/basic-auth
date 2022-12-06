@@ -1,11 +1,14 @@
 'use strict';
 
-let { sequelize } =  require('./src/server');
+require('dotenv').config();
+
+const { start } = require('./src/server');
+let { sequelize } =  require('./src/auth/models');
 
 // make sure our tables are created, start up the HTTP server.
 sequelize.sync()
   .then(() => {
-    console.log('server up');
-  }).catch(e => {
-    console.error('Could not start server', e.message);
-  });
+    start();
+    console.log('successful connection');
+  })
+  .catch(e => console.error(e));
