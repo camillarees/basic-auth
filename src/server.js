@@ -2,12 +2,12 @@
 
 // 3rd Party Resources
 const express = require('express');
-const authRouter = require('./');
+const authRouter = require('./auth/router');
 
 // Prepare the express app
 const app = express();
 
-const routes = require('./auth/routes/users');
+const routes = require('./auth/router');
 
 // Process JSON input and put the data on req.body
 app.use(express.json());
