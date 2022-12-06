@@ -15,7 +15,7 @@ router.post('/signup', async (req, res) => {
 });
 
 
-router.post('signin', basicAuth, (req, res, next) => {
+router.post('/signin', basicAuth, (req, res, next) => {
   res.status(200).send(req.user);
 });
 

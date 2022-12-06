@@ -5,7 +5,7 @@ const { sequelize, UsersModel } = require('../src/auth/models');
 
 let user = {
   username: 'tester',
-  password: 'pass123',
+  password: 'pass',
 };
 
 beforeAll(async () => {
